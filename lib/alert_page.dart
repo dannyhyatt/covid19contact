@@ -2,6 +2,7 @@ import 'main.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'dart:math';
 
 enum LoadState {
   loading, success, error
@@ -43,7 +44,8 @@ class _AlertPageState extends State<AlertPage> {
         }
         for(int i = 0; i < res.data['ids'].length; i++) {
           debugPrint('millisecionds since epoch: ${res.data['times']}');
-          DateTime dt = DateTime.fromMicrosecondsSinceEpoch(int.parse(res.data['times']), isUtc: true).toLocal();
+          debugPrint('for dart: ${DateTime.now().toUtc().millisecondsSinceEpoch}');
+          DateTime dt = DateTime.fromMillisecondsSinceEpoch((int.parse(res.data['times'])).floor(), isUtc: true).toLocal();
           children.add(Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

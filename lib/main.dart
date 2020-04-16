@@ -92,6 +92,9 @@ class _BroadcastPageState extends State<BroadcastPage> {
 
   @override
   void initState() {
+
+    sharedPreferences.setString('my_id', '2');
+
     super.initState();
 
     currentSession = Session();
