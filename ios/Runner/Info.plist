@@ -28,6 +28,8 @@
 	<string>Main</string>
     <key>MinimumOSVersion</key>
     <string>11.0</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We used Bluetooth to detect those around you.</string>
     <key>NSBluetoothPeripheralUsageDescription</key>
     <string>We used Bluetooth to detect those around you.</string>
 	<key>UISupportedInterfaceOrientations</key>
